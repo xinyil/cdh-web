@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.db
+.DS_Store
+.coverage
+*.swp
+**/static/media
+cdhWebsite/local_settings.py
+*.out
