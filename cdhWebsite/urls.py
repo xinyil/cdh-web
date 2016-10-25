@@ -6,12 +6,12 @@ from django.contrib import admin
 from django.views.i18n import set_language
 from django.views.generic import TemplateView
 
-from mezzanine.pages.views import page 
+from mezzanine.pages.views import page
 from mezzanine.core.views import direct_to_template
 from mezzanine.conf import settings
 
-from projectpages.views import display 
-from eventspages.views import display_event 
+from projectpages.views import display
+from eventspages.views import display_event
 from subscribe.views import RegisterView
 from icalevents.views import return_ical
 from staffprofiles.views import generate_stafferpage
@@ -37,7 +37,7 @@ if settings.USE_MODELTRANSLATION:
 
 if settings.DEBUG:
     urlpatterns += [
-        url('^404/$', TemplateView.as_view(template_name='404.html')), 
+        url('^404/$', TemplateView.as_view(template_name='404.html')),
     ]
 
 urlpatterns += [
@@ -47,33 +47,33 @@ urlpatterns += [
 
     # Project absolute urls (keyed to title, lowercase, no space)
     url(r"^projects/(?P<title>.+)/$", display, name='display'),
-    
+
     # Event absolute urls (keyed to pk)
     url(r"^events/(?P<pk>\d+)/$", display_event, name='event'),
 
     # DHGROUP subscription view urls
     url(r"^subscribe/$", RegisterView.as_view(), name='subscribe'),
-    url(r"^thanks/$", TemplateView.as_view(template_name='thanks.html'), name='thanks'), 
+    url(r"^thanks/$", TemplateView.as_view(template_name='thanks.html'), name='thanks'),
     # iCal Feeds
-    url(r"^ical/(?P<pk>\d+)/$", return_ical, name='ical_event'), 
+    url(r"^ical/(?P<pk>\d+)/$", return_ical, name='ical_event'),
 
     # Staff page urls
-    url(r"^staff/(?P<name>.+)/$", generate_stafferpage, name='staffer'),
+    url(r"^about/staff/(?P<name>.+)/$", generate_stafferpage, name='staffer'),
 
     # Recent feed
-    url(r'^latest/feed/$', CombinedRecentFeed()), 
+    url(r'^latest/feed/$', CombinedRecentFeed()),
 
     # Blog post to date redirect
     url(r'^blog/(?P<slug>[a-z\-0-9A-Z:]+)/$', BlogSlugRedirectView.as_view(),
         name='blogslug-redirect'),
 
 
-] 
-    
+]
+
 urlpatterns += [
 
-        
-        
+
+
         # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
@@ -113,7 +113,7 @@ urlpatterns += [
 
     # url("^$", mezzanine.blog.views.blog_post_list, name="home"),
 
-    
+
     # MEZZANINE'S URLS
     # ----------------
     # ADD YOUR OWN URLPATTERNS *ABOVE* THE LINE BELOW.
@@ -124,7 +124,7 @@ urlpatterns += [
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
-    
+
     url("^", include("mezzanine.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
