@@ -17,7 +17,7 @@ class Staffer(models.Model):
     sortorder = models.IntegerField()
 
     def __str__(self):
-        return self.title + ': ' + self.name 
+        return self.title + ': ' + self.name
 
 
 # List of specialties, many to many on Staffer
@@ -32,7 +32,7 @@ class StafferPage(Displayable):
     extra_content = RichTextField()
 
     def get_absolute_url(self):
-        return '/staff/' + self.staffer_data.name.lower().replace(' ', '-')
+        return '/about/staff/' + self.staffer_data.name.lower().replace(' ', '-')
 
     class Meta:
         ordering = ['-staffer_data__sortorder']
