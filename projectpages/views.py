@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404, HttpResponse
 from .models import ProjectPage, ProjectMember, ProjectsLandingPage
+from stocktemplate.models import StockLandingPage
 from pprint import pprint
 
 
@@ -10,7 +11,7 @@ from pprint import pprint
 
 def display(request, title):
 
-    research_page = ProjectsLandingPage.objects.get(slug='research')
+    research_page = StockLandingPage.objects.get(slug='research')
     pprint(vars(research_page))
     
     for page in ProjectPage.objects.all():
