@@ -1,5 +1,9 @@
 # CDH Website Repo
 
+[![Build Status](https://travis-ci.org/Princeton-CDH/cdh-web.svg?branch=feature%2Fbasic-tests)](https://travis-ci.org/Princeton-CDH/cdh-web)
+[![codecov](https://codecov.io/gh/Princeton-CDH/cdh-web/branch/feature%2Fbasic-tests/graph/badge.svg)](https://codecov.io/gh/Princeton-CDH/cdh-web)
+[![Code Health](https://landscape.io/github/Princeton-CDH/cdh-web/develop/landscape.svg?style=flat)](https://landscape.io/github/Princeton-CDH/cdh-web/develop)
+
 ## Overview
 The purpose of this repo is to house the development files for the current version of the CDH Website,
 including static files used in templates (**not** static/media).
@@ -36,12 +40,14 @@ digitalhumanities@princeton.edu
 
 ## Tests
 
-Unit tests are written with py.test but use Django fixture loading and convenience
+Unit tests are written with [py.test](http://doc.pytest.org/) but use Django fixture loading and convenience
 testing methods when that makes things easier.  To run them, first install
 development requirements:
-
-  pip install -r dev-requirements.txt
+```
+pip install -r dev-requirements.txt
+```
 
 Run tests using py.test:
-
-  py.test
+```
+py.test
+```
