@@ -1,7 +1,7 @@
 # CDH Website Repo
 
-[![Build Status](https://travis-ci.org/Princeton-CDH/cdh-web.svg?branch=feature%2Fbasic-tests)](https://travis-ci.org/Princeton-CDH/cdh-web)
-[![codecov](https://codecov.io/gh/Princeton-CDH/cdh-web/branch/feature%2Fbasic-tests/graph/badge.svg)](https://codecov.io/gh/Princeton-CDH/cdh-web)
+[![Build Status](https://travis-ci.org/Princeton-CDH/cdh-web.svg?branch=develop)](https://travis-ci.org/Princeton-CDH/cdh-web)
+[![codecov](https://codecov.io/gh/Princeton-CDH/cdh-web/branch/develop/graph/badge.svg)](https://codecov.io/gh/Princeton-CDH/cdh-web)
 [![Code Health](https://landscape.io/github/Princeton-CDH/cdh-web/develop/landscape.svg?style=flat)](https://landscape.io/github/Princeton-CDH/cdh-web/develop)
 
 ## Overview
