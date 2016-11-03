@@ -32,3 +32,16 @@ The website lives on the server cdh-web.princeton.edu (publicly aliased as digit
 digitalhumanities@princeton.edu
 + templates
   + All template files, including blog/ includes/ and pages/, as well as templates in the main directory for displaybles, primarily project and event individual pages (staff pages to be added)
+
+
+## Tests
+
+Unit tests are written with py.test but use Django fixture loading and convenience
+testing methods when that makes things easier.  To run them, first install
+development requirements:
+
+  pip install -r dev-requirements.txt
+
+Run tests using py.test:
+
+  py.test

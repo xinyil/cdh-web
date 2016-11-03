@@ -1,0 +1,4 @@
+pytest
+pytest-django
+# optional but pretty
+pytest-sugar
