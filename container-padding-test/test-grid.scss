@@ -2,9 +2,10 @@
 @import "neat/neat";
 body {
     section {
+    margin: 20 20 20 20;
+    background-color: lightgray;  
     @include outer-container;
     @include pad(5px 5px 5px 5px);
-    background-color: lightyellow;
     div.column {
         @include span-columns(3);
         article {
