@@ -1,0 +1,16 @@
+@import "neat/neat-helpers";
+
+//Current settings for the minimum of large viewport
+$column: 65px;
+$gutter: 20px;
+
+$grid-columns: 12;
+$max-width: 1069px;
+
+//Turn on the visual grid
+$visual-grid: true;
+$visual-grid-color: lightpink;
+
+//One below the bottom of the previous viewport (large,
+//defined by max-width above)
+$medium: new-breakpoint(max-width 1068px 10)
