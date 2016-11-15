@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body:before {
+  background-image: -webkit-linear-gradient(left, transparent 0, lightpink 0, lightpink 6.5%, transparent 6.5%, transparent 8.5%, lightpink 8.5%, lightpink 15%, transparent 15%, transparent 17%, lightpink 17%, lightpink 23.5%, transparent 23.5%, transparent 25.5%, lightpink 25.5%, lightpink 32%, transparent 32%, transparent 34%, lightpink 34%, lightpink 40.5%, transparent 40.5%, transparent 42.5%, lightpink 42.5%, lightpink 49%, transparent 49%, transparent 51%, lightpink 51%, lightpink 57.5%, transparent 57.5%, transparent 59.5%, lightpink 59.5%, lightpink 66%, transparent 66%, transparent 68%, lightpink 68%, lightpink 74.5%, transparent 74.5%, transparent 76.5%, lightpink 76.5%, lightpink 83%, transparent 83%, transparent 85%, lightpink 85%, lightpink 91.5%, transparent 91.5%, transparent 93.5%, lightpink 93.5%, lightpink 100%, transparent 100%);
+  background-image: -moz-linear-gradient(left, transparent 0, lightpink 0, lightpink 6.5%, transparent 6.5%, transparent 8.5%, lightpink 8.5%, lightpink 15%, transparent 15%, transparent 17%, lightpink 17%, lightpink 23.5%, transparent 23.5%, transparent 25.5%, lightpink 25.5%, lightpink 32%, transparent 32%, transparent 34%, lightpink 34%, lightpink 40.5%, transparent 40.5%, transparent 42.5%, lightpink 42.5%, lightpink 49%, transparent 49%, transparent 51%, lightpink 51%, lightpink 57.5%, transparent 57.5%, transparent 59.5%, lightpink 59.5%, lightpink 66%, transparent 66%, transparent 68%, lightpink 68%, lightpink 74.5%, transparent 74.5%, transparent 76.5%, lightpink 76.5%, lightpink 83%, transparent 83%, transparent 85%, lightpink 85%, lightpink 91.5%, transparent 91.5%, transparent 93.5%, lightpink 93.5%, lightpink 100%, transparent 100%);
+  background-image: -ms-linear-gradient(left, transparent 0, lightpink 0, lightpink 6.5%, transparent 6.5%, transparent 8.5%, lightpink 8.5%, lightpink 15%, transparent 15%, transparent 17%, lightpink 17%, lightpink 23.5%, transparent 23.5%, transparent 25.5%, lightpink 25.5%, lightpink 32%, transparent 32%, transparent 34%, lightpink 34%, lightpink 40.5%, transparent 40.5%, transparent 42.5%, lightpink 42.5%, lightpink 49%, transparent 49%, transparent 51%, lightpink 51%, lightpink 57.5%, transparent 57.5%, transparent 59.5%, lightpink 59.5%, lightpink 66%, transparent 66%, transparent 68%, lightpink 68%, lightpink 74.5%, transparent 74.5%, transparent 76.5%, lightpink 76.5%, lightpink 83%, transparent 83%, transparent 85%, lightpink 85%, lightpink 91.5%, transparent 91.5%, transparent 93.5%, lightpink 93.5%, lightpink 100%, transparent 100%);
+  background-image: -o-linear-gradient(left, transparent 0, lightpink 0, lightpink 6.5%, transparent 6.5%, transparent 8.5%, lightpink 8.5%, lightpink 15%, transparent 15%, transparent 17%, lightpink 17%, lightpink 23.5%, transparent 23.5%, transparent 25.5%, lightpink 25.5%, lightpink 32%, transparent 32%, transparent 34%, lightpink 34%, lightpink 40.5%, transparent 40.5%, transparent 42.5%, lightpink 42.5%, lightpink 49%, transparent 49%, transparent 51%, lightpink 51%, lightpink 57.5%, transparent 57.5%, transparent 59.5%, lightpink 59.5%, lightpink 66%, transparent 66%, transparent 68%, lightpink 68%, lightpink 74.5%, transparent 74.5%, transparent 76.5%, lightpink 76.5%, lightpink 83%, transparent 83%, transparent 85%, lightpink 85%, lightpink 91.5%, transparent 91.5%, transparent 93.5%, lightpink 93.5%, lightpink 100%, transparent 100%);
+  background-image: linear-gradient(to left, transparent 0, lightpink 0, lightpink 6.5%, transparent 6.5%, transparent 8.5%, lightpink 8.5%, lightpink 15%, transparent 15%, transparent 17%, lightpink 17%, lightpink 23.5%, transparent 23.5%, transparent 25.5%, lightpink 25.5%, lightpink 32%, transparent 32%, transparent 34%, lightpink 34%, lightpink 40.5%, transparent 40.5%, transparent 42.5%, lightpink 42.5%, lightpink 49%, transparent 49%, transparent 51%, lightpink 51%, lightpink 57.5%, transparent 57.5%, transparent 59.5%, lightpink 59.5%, lightpink 66%, transparent 66%, transparent 68%, lightpink 68%, lightpink 74.5%, transparent 74.5%, transparent 76.5%, lightpink 76.5%, lightpink 83%, transparent 83%, transparent 85%, lightpink 85%, lightpink 91.5%, transparent 91.5%, transparent 93.5%, lightpink 93.5%, lightpink 100%, transparent 100%);
+  content: "";
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  max-width: 1069px;
+  opacity: 0.4;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  z-index: -1; }
+  @media screen and (max-width: 1000px) {
+    body:before {
+      background-image: -webkit-linear-gradient(left, transparent 0, lightpink 0, lightpink 8.72483%, transparent 8.72483%, transparent 11.4094%, lightpink 11.4094%, lightpink 20.13423%, transparent 20.13423%, transparent 22.81879%, lightpink 22.81879%, lightpink 31.54362%, transparent 31.54362%, transparent 34.22819%, lightpink 34.22819%, lightpink 42.95302%, transparent 42.95302%, transparent 45.63758%, lightpink 45.63758%, lightpink 54.36242%, transparent 54.36242%, transparent 57.04698%, lightpink 57.04698%, lightpink 65.77181%, transparent 65.77181%, transparent 68.45638%, lightpink 68.45638%, lightpink 77.18121%, transparent 77.18121%, transparent 79.86577%, lightpink 79.86577%, lightpink 88.5906%, transparent 88.5906%, transparent 91.27517%, lightpink 91.27517%, lightpink 100%, transparent 100%);
+      background-image: -moz-linear-gradient(left, transparent 0, lightpink 0, lightpink 8.72483%, transparent 8.72483%, transparent 11.4094%, lightpink 11.4094%, lightpink 20.13423%, transparent 20.13423%, transparent 22.81879%, lightpink 22.81879%, lightpink 31.54362%, transparent 31.54362%, transparent 34.22819%, lightpink 34.22819%, lightpink 42.95302%, transparent 42.95302%, transparent 45.63758%, lightpink 45.63758%, lightpink 54.36242%, transparent 54.36242%, transparent 57.04698%, lightpink 57.04698%, lightpink 65.77181%, transparent 65.77181%, transparent 68.45638%, lightpink 68.45638%, lightpink 77.18121%, transparent 77.18121%, transparent 79.86577%, lightpink 79.86577%, lightpink 88.5906%, transparent 88.5906%, transparent 91.27517%, lightpink 91.27517%, lightpink 100%, transparent 100%);
+      background-image: -ms-linear-gradient(left, transparent 0, lightpink 0, lightpink 8.72483%, transparent 8.72483%, transparent 11.4094%, lightpink 11.4094%, lightpink 20.13423%, transparent 20.13423%, transparent 22.81879%, lightpink 22.81879%, lightpink 31.54362%, transparent 31.54362%, transparent 34.22819%, lightpink 34.22819%, lightpink 42.95302%, transparent 42.95302%, transparent 45.63758%, lightpink 45.63758%, lightpink 54.36242%, transparent 54.36242%, transparent 57.04698%, lightpink 57.04698%, lightpink 65.77181%, transparent 65.77181%, transparent 68.45638%, lightpink 68.45638%, lightpink 77.18121%, transparent 77.18121%, transparent 79.86577%, lightpink 79.86577%, lightpink 88.5906%, transparent 88.5906%, transparent 91.27517%, lightpink 91.27517%, lightpink 100%, transparent 100%);
+      background-image: -o-linear-gradient(left, transparent 0, lightpink 0, lightpink 8.72483%, transparent 8.72483%, transparent 11.4094%, lightpink 11.4094%, lightpink 20.13423%, transparent 20.13423%, transparent 22.81879%, lightpink 22.81879%, lightpink 31.54362%, transparent 31.54362%, transparent 34.22819%, lightpink 34.22819%, lightpink 42.95302%, transparent 42.95302%, transparent 45.63758%, lightpink 45.63758%, lightpink 54.36242%, transparent 54.36242%, transparent 57.04698%, lightpink 57.04698%, lightpink 65.77181%, transparent 65.77181%, transparent 68.45638%, lightpink 68.45638%, lightpink 77.18121%, transparent 77.18121%, transparent 79.86577%, lightpink 79.86577%, lightpink 88.5906%, transparent 88.5906%, transparent 91.27517%, lightpink 91.27517%, lightpink 100%, transparent 100%);
+      background-image: linear-gradient(to left, transparent 0, lightpink 0, lightpink 8.72483%, transparent 8.72483%, transparent 11.4094%, lightpink 11.4094%, lightpink 20.13423%, transparent 20.13423%, transparent 22.81879%, lightpink 22.81879%, lightpink 31.54362%, transparent 31.54362%, transparent 34.22819%, lightpink 34.22819%, lightpink 42.95302%, transparent 42.95302%, transparent 45.63758%, lightpink 45.63758%, lightpink 54.36242%, transparent 54.36242%, transparent 57.04698%, lightpink 57.04698%, lightpink 65.77181%, transparent 65.77181%, transparent 68.45638%, lightpink 68.45638%, lightpink 77.18121%, transparent 77.18121%, transparent 79.86577%, lightpink 79.86577%, lightpink 88.5906%, transparent 88.5906%, transparent 91.27517%, lightpink 91.27517%, lightpink 100%, transparent 100%); } }
+
+section {
+  overflow-x: hidden;
+  max-width: 1069px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 5px 5px 5px; }
+  section::after {
+    clear: both;
+    content: "";
+    display: block; }
+  section article {
+    text-overflow: ellipsis;
+    float: left;
+    display: block;
+    margin-right: 2%;
+    width: 23.5%; }
+    section article:last-child {
+      margin-right: 0; }
+    section article:nth-child(4n) {
+      margin-right: 0; }
+    section article:nth-child(4n+1) {
+      clear: left; }
+  @media screen and (max-width: 1000px) {
+    section article {
+      text-overflow: ellipsis;
+      float: left;
+      display: block;
+      margin-right: 2.68456%;
+      width: 31.54362%; }
+      section article:last-child {
+        margin-right: 0; }
+      section article:nth-child(3n) {
+        margin-right: 0; }
+      section article:nth-child(3n+1) {
+        clear: left; } }
+
+div.project-box {
+  width: 235px;
+  height: 176px;
+  display: inline-block;
+  margin-bottom: 20px;
+  overflow: hidden;
+  clip-path: url("test-grid.html#clipImage"); }
+  div.project-box:hover > div.title-box, div.project-box:hover > div.title-text {
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    opacity: 0; }
+  div.project-box img {
+    /*Chrome,Safari*/
+    -webkit-clip-path: polygon(185px 0px, 235px 50px, 235px 176px, 50px 176px, 0px 126px, 0px 0px);
+    /*Firefox*/
+    clip-path: url("test-grid.html#clipImage");
+    overflow: hidden;
+    position: absolute;
+    max-height: 300px;
+    max-width: 300px;
+    width: auto; }
+
+div.title-box {
+  width: 185px;
+  height: 126px;
+  background: white;
+  z-index: 10;
+  position: absolute;
+  opacity: 1;
+  padding-left: 0px;
+  overflow: hidden;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out; }
+  div.title-box p {
+    padding: 0.25em;
+    font-family: 'Brown Std Bold';
+    font-size: 18px;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; }
+
+/*# sourceMappingURL=test-grid.css.map */
