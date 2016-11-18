@@ -1,74 +1,29 @@
 @import "grid-settings";
 @import "neat/neat";
 
+
 section {
-overflow-x: hidden;
-@include outer-container;
-@include pad(5px 5px 5px 5px);
-article {
-  text-overflow: ellipsis;
-  @include span-columns(3);
-  @include omega(4n);
-
-}
-@include media($medium) {
-  article {
-    text-overflow: ellipsis;
-    @include span-columns(3);
-    @include omega(3n);
-
-  }
-}
-}
-
-div.project-box {
-  width: 235px;
-  height: 176px;
-  display: inline-block;
-  margin-bottom: 20px;
+  @include responsive-container;
+  max-height: 1000px;
   overflow: hidden;
-  clip-path: url('test-grid.html#clipImage');
-  &:hover > {
-    div.title-box, div.title-text{
-      transition: opacity .25s ease-in-out;
-      -moz-transition: opacity .25s ease-in-out;
-      -webkit-transition: opacity .25s ease-in-out;
-      opacity: 0;
+  div.column {
+    @include span-columns(1);
+    @include omega(12n);
+    background-color: lightblue;
+    height: 1000px;
+
+    @include media($medium) {
+      @include span-columns(1);
+      @include omega(9n);
+      background-color: lightblue;
+      height: 1000px;
+    }
+
+    @include media($small) {
+      @include span-columns(1);
+      @include omega(1n);
+      background-color: lightblue;
+      height: 1000px;
     }
   }
-  img {
-    /*Chrome,Safari*/
-    -webkit-clip-path: polygon(185px 0px, 235px 50px, 235px 176px, 50px 176px, 0px 126px, 0px 0px);
-    /*Firefox*/
-    clip-path: url('test-grid.html#clipImage');
-    overflow: hidden;
-    position: absolute;
-    max-height: 300px;
-    max-width: 300px;
-    width: auto;
-  }
-}
-
-div.title-box {
-  width: 185px;
-  height: 126px;
-  background: white;
-  z-index: 10;
-  position: absolute;
-  opacity: 1;
-  padding-left: 0px;
-  overflow: hidden;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
-
-  p {
-    padding: 0.25em;
-    font-family: 'Brown Std Bold';
-    font-size: 18px;
-    opacity: 1;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-		}
 }

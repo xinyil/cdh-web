@@ -9,22 +9,18 @@ $grid-columns: 12;
 $max-width: 990px;
 
 //Breakpoint grid values
-$large_val: 990px;
 $medium_val: 735px;
 $small_val: 84%;
 
-//Turn on the visual grid
-$visual-grid: true;
-$visual-grid-color: lightpink;
 
-$large: new-breakpoint(max-width 1440px 12);
 $medium: new-breakpoint(max-width 1068px 9);
 $small: new-breakpoint(max-width 735px 1);
 
 @import "neat/neat";
 
 @mixin responsive-container {
-  @include outer-container(100%);
+
+  @include outer-container();
 
   @include media($small) {
     @include outer-container($small_val);
@@ -32,10 +28,6 @@ $small: new-breakpoint(max-width 735px 1);
 
   @include media($medium) {
     @include outer-container($medium_val);
-  }
-
-  @include media($large) {
-    @include outer-container($large_val);
   }
 }
 
