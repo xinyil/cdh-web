@@ -10,5 +10,6 @@ urlpatterns = [
         name='calendar-redirect'),
     url(r'^directions/', RedirectView.as_view(url='/contact/', permanent=True),
         name='directions-redirect'),
-
+    url(r'^feed/', RedirectView.as_view(url='/latest/feed/', permanent=True),
+        name='RSS-feed'),
 ]
