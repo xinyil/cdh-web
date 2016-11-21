@@ -1,29 +1,72 @@
 @import "grid-settings";
 @import "neat/neat";
 
+div.bleed-image-placeholder {
+  width: 100%;
+  height: 300px;
+  max-width: 1440px;
+  background-color: lightpink;
+  z-index: -5;
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-top: 90px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+	background-color: lightyellow;
+	width: 100%;
+	height: 90px;
+	max-width: 1440px;
+	position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 section {
   @include responsive-container;
-  max-height: 1000px;
+  max-height: 3000px;
   overflow: hidden;
   div.column {
     @include span-columns(1);
     @include omega(12n);
     background-color: lightblue;
-    height: 1000px;
+    height: 3000px;
 
     @include media($medium) {
       @include span-columns(1);
       @include omega(9n);
       background-color: lightblue;
-      height: 1000px;
+      height: 3000px;
     }
 
     @include media($small) {
       @include span-columns(1);
       @include omega(1n);
       background-color: lightblue;
-      height: 1000px;
+      height: 3000px;
     }
   }
+}
+
+footer {
+	height: 246px;
+	background-color: lightgreen;
+	max-width: 1440px;
+	width: 100%;
+	position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+	z-index: -5;
+	overflow: hidden;
 }
