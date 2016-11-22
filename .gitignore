@@ -7,3 +7,4 @@
 **/static/media
 cdhWebsite/local_settings.py
 *.out
+.cache
