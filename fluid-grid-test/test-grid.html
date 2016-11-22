@@ -2,7 +2,7 @@
 <head>
 <link rel='stylesheet'
       type='text/css'
-      href='test-grid.css'>
+      href='test-grid-autopref.css'>
 
 <script
 			  src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -14,7 +14,7 @@ var scroll = 0;
 /*
 	Check every time the window scrolls. If it's by 25px or more and the scroll
 	is below 90px, hide the navi. If the scroll down isn't those, leave it as is.
-	If the scroll is up by even a px, bring the menu back.
+	If the scroll is up by 5 px, bring the menu back.
 */
 $(window).scroll(function() {
 	scrolled = $(document).scrollTop();
@@ -22,7 +22,7 @@ $(window).scroll(function() {
 			$('header').addClass('hidden');
 		} else if  (scrolled > scroll) {
 			// Do nothing since the scroll was either too high or not 'enough'
-		} else {
+		} else if (scrolled < scroll && scroll - scrolled > 5) {
 			$('header').removeClass('hidden');
 		}
 	
