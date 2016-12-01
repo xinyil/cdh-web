@@ -1,6 +1,6 @@
 @import "grid-settings";
 @import "neat/neat";
-
+@import "variables";
 // Padding 0px for body per spec.
 body {
 	padding: 0px;
@@ -39,7 +39,7 @@ header {
 	}
 	
 	section {
-		@include response-container;
+		@include responsive-container;
 		ul {
 			@include row;
 			li {
