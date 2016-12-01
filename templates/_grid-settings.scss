@@ -17,9 +17,10 @@ $medium: new-breakpoint(max-width 1068px 9);
 $small: new-breakpoint(max-width 735px 1);
 
 @import "neat/neat";
-
+/* Create a mix-in with responsive container behavior to use in place of outer-container()
+Note that visual-grid must be written manually to follow this behavior since it's 
+constructed using a background image */
 @mixin responsive-container {
-
   @include outer-container();
 
   @include media($small) {
@@ -31,8 +32,3 @@ $small: new-breakpoint(max-width 735px 1);
   }
 }
 
-@if ($visual-grid) {
-  body:before {
-    @include responsive-container;
-  }
-}
