@@ -27,7 +27,7 @@ html {
   font-style: normal;
   font-stretch: normal; }
 body {
-  padding: 0px;
+  padding: 21px;
   margin: 0px; }
 
 div.bleed-image-placeholder {
@@ -58,40 +58,51 @@ header {
   transition-timing-function: ease-in-out; }
   header.hidden {
     margin-top: -90px; }
-  header section {
+  header nav {
     max-width: 990px;
     margin-left: auto;
-    margin-right: auto; }
-    header section::after {
+    margin-right: auto;
+    display: flex; }
+    header nav::after {
       clear: both;
       content: "";
       display: block; }
-    @media screen and (max-width: 735px) {
-      header section {
-        max-width: 84%;
-        margin-left: auto;
-        margin-right: auto; }
-        header section::after {
-          clear: both;
-          content: "";
-          display: block; } }
-    @media screen and (max-width: 1068px) {
-      header section {
-        max-width: 735px;
-        margin-left: auto;
-        margin-right: auto; }
-        header section::after {
-          clear: both;
-          content: "";
-          display: block; } }
+    header nav a.home-page {
+      width: 60px;
+      height: 44.8px;
+      margin-right: 36.2px; }
+      header nav a.home-page img {
+        flex: auto;
+        width: 60px;
+        height: 44.8px; }
+  header section {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    padding: 0px; }
     header section ul {
-      display: block; }
-      header section ul::after {
-        clear: both;
-        content: "";
-        display: block; }
+      display: flex;
+      flex: auto;
+      text-align: left;
+      padding: 0px;
+      width: 100%;
+      height: 15px;
+      margin-bottom: 14px;
+      margin-top: 14px; }
+      header section ul.first-row {
+        margin-top: 0px; }
+      header section ul.horizontal-rule {
+        border: solid 1px #d8d8d8;
+        height: 2px;
+        margin: 0px; }
+      header section ul li {
+        font-family: BrownStdBold, bold arial, sans-serif;
+        font-size: 12px;
+        color: #000000;
+        flex: auto;
+        display: inline; }
 
-/* div.column = Basic incantation for the columns (or any class that needs to 
+/* div.column = Basic incantation for the columns (or any class that needs to
 	be put in a columnar format and auto-wrapped */
 section {
   max-width: 990px;
@@ -121,47 +132,6 @@ section {
         clear: both;
         content: "";
         display: block; } }
-  section div.column {
-    float: left;
-    display: block;
-    margin-right: 3.0303%;
-    width: 5.55556%;
-    background-color: lightblue;
-    height: 3000px; }
-    section div.column:last-child {
-      margin-right: 0; }
-    section div.column:nth-child(12n) {
-      margin-right: 0; }
-    section div.column:nth-child(12n+1) {
-      clear: left; }
-    @media screen and (max-width: 1068px) {
-      section div.column {
-        float: left;
-        display: block;
-        margin-right: 4.08163%;
-        width: 7.48299%;
-        background-color: lightblue;
-        height: 3000px; }
-        section div.column:last-child {
-          margin-right: 0; }
-        section div.column:nth-child(9n) {
-          margin-right: 0; }
-        section div.column:nth-child(9n+1) {
-          clear: left; } }
-    @media screen and (max-width: 735px) {
-      section div.column {
-        float: left;
-        display: block;
-        margin-right: 54.54545%;
-        width: 100%;
-        background-color: lightblue;
-        height: 3000px; }
-        section div.column:last-child {
-          margin-right: 0; }
-        section div.column:nth-child(1n) {
-          margin-right: 0; }
-        section div.column:nth-child(1n+1) {
-          clear: left; } }
 
 footer {
   height: 246px;

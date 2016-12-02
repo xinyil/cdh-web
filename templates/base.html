@@ -1,74 +1,73 @@
 <html>
+
 <head>
-<link rel='stylesheet'
-      type='text/css'
-      href='test-grid-autopref.css'>
+    <link rel='stylesheet' type='text/css' href='base.css'>
 
-<script
-			  src="https://code.jquery.com/jquery-3.1.1.min.js"
-			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-			  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
 
-<script>
-var scroll = 0;
-/*
-	Check every time the window scrolls. If it's by 25px or more and the scroll
-	is below 90px, hide the navi. If the scroll down isn't those, leave it as is.
-	If the scroll is up by 5 px, bring the menu back.
-*/
-$(window).scroll(function() {
-	scrolled = $(document).scrollTop();
-		if (scrolled - scroll > 25  && scrolled > scroll && scrolled > 90) {
-			$('header').addClass('hidden');
-		} else if  (scrolled > scroll) {
-			// Do nothing since the scroll was either too high or not 'enough'
-		} else if (scrolled < scroll && scroll - scrolled > 5) {
-			$('header').removeClass('hidden');
-		}
-	
-		scroll = scrolled;
+    <script>
+        var scroll = 0;
+        /*
+        	Check every time the window scrolls. If it's by 25px or more and the scroll
+        	is below 90px, hide the navi. If the scroll down isn't those, leave it as is.
+        	If the scroll is up by 5 px, bring the menu back.
+        */
+        $(window).scroll(function()
+        {
+            scrolled = $(document).scrollTop();
+            if (scrolled - scroll > 25 && scrolled > scroll && scrolled >
+                90)
+            {
+                $('header').addClass('hidden');
+            }
+            else if (scrolled > scroll)
+            {
+                // Do nothing since the scroll was either too high or not 'enough'
+            }
+            else if (scrolled < scroll && scroll - scrolled > 5)
+            {
+                $('header').removeClass('hidden');
+            }
 
-});
+            scroll = scrolled;
 
-</script>
+        });
+    </script>
 
 </head>
 
 <body>
-	<header>Menu goes here</header>
-  <div class='bleed-image-placeholder'>Full bleed up to max viewport</div>
-  <section>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
 
-  </section>
-	<footer>
-	<section>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
-    <div class='column'></div>
+  
+    <header>
+        <nav>
+          <a href='#' class='home-page'><img src='CDH_logo_01.svg'></a> 
+          </div>
+          <section>
+          <ul class='first-row'>
+            <li>ABOUT</li>
+            <li>RESEARCH</li>
+            <li>GRANTS</li>
+            <li>RESOURCES</li>
+            <li>COMMUNITY</li>
+            <li>UPDATES</li>
+            <li>EVENTS</li>
+            <li>SEARCH</li>
+          </ul> 
+          <ul class='horizontal-rule'></ul> 
+          <ul>
+          <li>New to DH</li>
+          <li>Certificates and Courses</li>
+          <li>Reading Group Zotero Feed</li>
+          <li>DH Events<li>
+        </ul>
+          </section>
 
-  </section>
-	</footer>
+      </nav>  
+
+    </header>
+    
 </body>
 
 </html>
