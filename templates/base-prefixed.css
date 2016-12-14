@@ -55,16 +55,23 @@ header {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  -webkit-transition: margin-top 0.25s;
   transition: margin-top 0.25s;
-  transition-timing-function: ease-in-out; }
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out; }
   header.hidden {
     margin-top: -90px; }
   header nav {
     max-width: 990px;
     margin-left: auto;
     margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
     header nav::after {
       clear: both;
       content: "";
@@ -92,17 +99,30 @@ header {
       height: 44.8px;
       margin-right: 36.2px; }
       header nav a.home-page img {
-        flex: auto;
+        -webkit-box-flex: 1;
+            -ms-flex: auto;
+                flex: auto;
         width: 60px;
         height: 44.8px; }
   header section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
     padding: 0; }
     header section ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex: auto;
+      -webkit-box-flex: 1;
+          -ms-flex: auto;
+              flex: auto;
       text-align: left;
       padding: 0;
       width: 100%;
@@ -119,7 +139,9 @@ header {
         font-family: BrownStdBold, bold arial, sans-serif;
         font-size: 12px;
         color: #000000;
-        flex: auto;
+        -webkit-box-flex: 1;
+            -ms-flex: auto;
+                flex: auto;
         display: inline; }
         header section ul li a {
           color: #000000;
@@ -179,8 +201,13 @@ footer section {
     display: block;
     margin-right: 3.0303%;
     width: 14.14141%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0; }
     footer section ul:last-child {
       margin-right: 0; }
@@ -190,7 +217,9 @@ footer section {
       clear: left; }
     footer section ul li {
       display: inline;
-      flex: auto;
+      -webkit-box-flex: 1;
+          -ms-flex: auto;
+              flex: auto;
       color: #000000;
       margin-top: 6px;
       margin-bottom: 6px;
