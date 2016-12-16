@@ -132,8 +132,7 @@ header {
       header section ul.first-row {
         margin-top: 0; }
       header section ul.horizontal-rule {
-        border: solid 1px #d8d8d8;
-        height: 2px;
+        border-top: solid 1px #d8d8d8;
         margin: 0; }
       header section ul li {
         font-family: BrownStdBold, bold arial, sans-serif;
@@ -165,7 +164,7 @@ footer section {
   height: 261px;
   width: 100%;
   overflow: hidden;
-  border-top: 2px;
+  border-top: 1px;
   border-top-style: solid;
   border-top-color: #d8d8d8; }
   footer section::after {

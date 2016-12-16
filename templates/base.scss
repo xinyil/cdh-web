@@ -69,8 +69,7 @@ header {
 				margin-top: 0;
 			}
 			&.horizontal-rule {
-				border: solid 1px #d8d8d8;
-				height: 2px;
+				border-top: solid 1px #d8d8d8;
 				margin: 0;
 			}
 			li {
@@ -108,7 +107,7 @@ footer {
 		height: 261px;
 		width: 100%;
 		overflow: hidden;
-		border-top: 2px;
+		border-top: 1px;
 		border-top-style: solid;
 		border-top-color: #d8d8d8;
 		p.contact-info {
