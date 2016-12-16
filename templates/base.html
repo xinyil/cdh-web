@@ -5,14 +5,17 @@
     <meta charset='UTF-8'>
     <link rel='stylesheet' type='text/css' href='base-prefixed.css'>
     <script src="https://use.fontawesome.com/46070f4452.js"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
 
     <script>
         var scroll = 0;
         /*
-        	Check every time the window scrolls. If it's by 25px or more and the scroll
-        	is below 90px, hide the navi. If the scroll down isn't those, leave it as is.
-        	If the scroll is up by 5 px, bring the menu back.
+        	Check every time the window scrolls. If it's by 25px or more and
+          the scroll is below 90px, hide the navi. If the scroll down isn't
+          those, leave it as is.
+          If the scroll is up by 5 px, bring the menu back.
         */
         $(window).scroll(function()
         {
@@ -24,7 +27,8 @@
             }
             else if (scrolled > scroll)
             {
-                // Do nothing since the scroll was either too high or not 'enough'
+                // Do nothing since the scroll was either
+                // too high or not 'enough'
             }
             else if (scrolled < scroll && scroll - scrolled > 5)
             {
@@ -39,11 +43,17 @@
 </head>
 
 <body>
-
+    <a href='#mainmenu' aria-label='Main Menu'></a>
+    <a href='#maincontent' aria-label='Main Content'></a>
+    <a href='#footermenu' aria-label='Footer Menu'></a>
 
     <header>
-        <nav>
-            <a href='#' class='home-page'><img src='CDH_logo_01.svg'></a>
+        <nav id='mainmenu'>
+            <a href='#' class='home-page'>
+              <img
+              alt='CDH Logo'
+              src='CDH_logo_01.svg' />
+            </a>
             <section>
                 <ul class='first-row'>
                     <li><a href='#'>ABOUT</a></li>
@@ -68,9 +78,10 @@
         </nav>
     </header>
     <div class='spacer'></div>
+    <div id='maincontent'></div>
 
 
-    <footer>
+    <footer id='footermenu'>
         <section>
             <ul>
                 <li class='menu-header'><a href='#'>ABOUT</a></li>
@@ -110,18 +121,22 @@
                 <li class='menu-header'><a href='#'>FAQS</a></li>
                 <li class='menu-header'><a href='#'>SUBSCRIBE</a></li>
                 <li><a href='#'><span class='fa fa-facebook-square'
-                    aria-hidden='true'>
+                    aria-label='CDH Facebook Link'>
               </span></a>
                     <a href='#'><span class='fa fa-twitter'
-                    aria-hidden='true'>
+                    aria-label='CDH Twitter Link'>
               </span></a>
                 </li>
 
             </ul>
 
             <p class='contact-info'>
-                Center for Digital Humanities<br /> Firestone Library Floor B<br /> Princeton University<br /> Princeton, NJ 08544<br />
-                <br /> ©2015 Trustees of Princeton University
+                Center for Digital Humanities<br />
+                Firestone Library Floor B<br />
+                Princeton University<br />
+                Princeton, NJ 08544<br />
+                <br />
+                ©2015 Trustees of Princeton University
             </p>
 
         </section>
