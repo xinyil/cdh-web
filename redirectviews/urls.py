@@ -12,4 +12,6 @@ urlpatterns = [
         name='directions-redirect'),
     url(r'^feed/', RedirectView.as_view(url='/latest/feed/', permanent=True),
         name='RSS-feed'),
+    url(r'^new/', RedirectView.as_view(url='/resources/new-to-dh/', permanent=True),
+        name='New-to-DH'),
 ]
