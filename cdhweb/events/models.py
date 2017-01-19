@@ -53,9 +53,10 @@ class Event(Displayable, RichText, AdminThumbMixin):
     location = models.ForeignKey(Location)
     event_type = models.ForeignKey(EventType)
     speakers = models.ManyToManyField(User,
-        help_text='Guest lecturer(s) or Workshop leader(s)')
+        help_text='Guest lecturer(s) or Workshop leader(s)',
+        blank=True)
 
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
 
     # override default manager with custom version
     objects = EventManager()
@@ -74,8 +75,9 @@ class Event(Displayable, RichText, AdminThumbMixin):
         # that mezzanine has to support; just handle the url style we
         # want to use locally
         return reverse('event:detail', kwargs={
-            'year': self.publish_date.year,
-            'month': self.publish_date.month,
+            'year': self.start_time.year,
+            # force two-digit month
+            'month': '%02d' % self.start_time.month,
             'slug': self.slug})
 
     def when(self):
