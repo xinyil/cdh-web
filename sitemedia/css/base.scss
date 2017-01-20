@@ -1,0 +1,296 @@
+@import "grid-settings";
+@import "neat/neat";
+@import "variables";
+
+body {
+	background-color: $bg-gray;
+	margin: 0;
+	padding: 0;
+}
+div.bleed-image-placeholder {
+	width: 100%;
+	height: 300px;
+	max-width: 1440px;
+	background-color: lightpink;
+	z-index: -5;
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
+}
+header {
+	width: 100%;
+	height: 90px;
+	max-width: 1440px;
+	position: fixed;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.95);
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	transition: margin-top 0.25s;
+	transition-timing-function: ease-in-out;
+	z-index: 1;
+	&.hidden {
+		margin-top: -90px;
+	}
+	nav {
+		margin: 8px;
+		@include responsive-container;
+		display: flex;
+		flex-direction: row;
+		a.home-page {
+			width: 60px;
+			height: 44.8px;
+			margin-right: 36.2px;
+			img {
+				flex: auto;
+				width: 60px;
+				height: 44.8px;
+			}
+		}
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		flex: auto;
+		padding: 0;
+		ul {
+			display: flex;
+			flex: auto;
+			text-align: left;
+			padding: 0;
+			width: 100%;
+			height: 15px;
+			// Make sure margins behave for spacing between rows (~28 px)
+			margin-bottom: 14px;
+			margin-top: 14px;
+			&.first-row {
+				margin-top: 0;
+				text-transform: uppercase;
+				padding-bottom: 14px;
+				border-bottom: solid 1px #d8d8d8;
+				height: auto;
+			}
+			li {
+				font-family: $font-stack-headline-bold;
+				font-size: 12px;
+				color: #000000;
+				flex: auto;
+				display: inline;
+				a {
+					color: #000000;
+					text-decoration: none;
+					padding-bottom: 13px;
+					&:focus,
+					&:hover,
+					&:visited {
+						text-decoration: none;
+						color: #000000;
+					}
+					&.current-page {
+						border-bottom: 4px;
+						border-bottom-color: $cdh-blue;
+						border-bottom-style: solid;
+					}
+				}
+			}
+		}
+	}
+}
+div.spacer {
+	height: 340px;
+}
+footer {
+	padding-top: 150px;
+	section {
+		@include responsive-container;
+		height: 261px;
+		width: 100%;
+		overflow: hidden;
+		border-top: 1px;
+		border-top-style: solid;
+		border-top-color: #d8d8d8;
+		p.contact-info {
+			position: absolute;
+			margin-top: 156px;
+			font-family: $font-stack-headline;
+			font-size: 12px;
+			color: #646464;
+		}
+		ul {
+			@include span-columns(2);
+			@include omega(6n);
+			display: flex;
+			flex-direction: column;
+			padding: 0;
+			li {
+				display: inline;
+				flex: auto;
+				color: #000000;
+				margin-top: 6px;
+				margin-bottom: 6px;
+				margin-left: 0;
+				font-family: $font-stack-headline;
+				font-size: 12px;
+				&.menu-header {
+					font-family: $font-stack-headline-bold;
+					text-transform: uppercase;
+				}
+				a {
+					color: #000000;
+					text-decoration: none;
+					&:focus,
+					&:hover,
+					&:visited {
+						text-decoration: none;
+						color: #000000;
+					}
+					span.fa {
+						font-size: 20px;
+						height: 20px;
+						width: 20px;
+						color: #646464 !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+article {
+	padding-top: 90px;
+	width: 100%;
+	position: relative;
+
+	header {
+		/* NOTE: styles currently for landing pages, may need adjustment */;
+		width: 100%;
+		max-width: none;
+		height: 680px;
+		position: relative;
+
+		font-family: $font-stack-headline;
+		font-size: 64px;
+		color: #ffffff;
+		text-align: left;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+
+  	    @include media($small) {
+  	    	height: 320px;
+  	    }
+
+		div {
+			padding-top: 350px;
+	  	    @include media($small) {
+				padding: 30px;
+	  	    }
+		}
+		a.home {
+			color: $cdh-blue;
+			display: inline-block;
+			font-weight: bold;
+			text-decoration: none;
+			/* fixme: not clickable - because of x-index? */;
+		}
+		h1 {
+			font-size: 100%;
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+		p {
+			margin-top: 0;
+			font-size: 20px;
+			/* FIXME: according to design font should be brown-std-alt ? */
+		}
+		p::before {
+			content: "< ";
+			color: $cdh-blue;
+		}
+		p::after {
+			content: " >";
+			color: $cdh-blue;
+			display: inline;
+		}
+	}
+
+	div {
+		@include responsive-container();
+	}
+
+	#maincontent {
+		margin-top: -116px;
+		background-color: white;
+		z-index: 4;  /* overlap background image from header */
+		padding: 80px 170px 100px;
+		position: relative;
+
+  	    @include media($medium) {
+  	    	padding: 80px 85px 100px;
+  	    }
+
+  	    @include media($small) {
+  	    	margin-top: auto;
+  	    	padding: 30px 30px 100px;
+  	    }
+
+	}
+}
+
+#maincontent {
+	@include responsive-container();
+}
+
+.card {
+	@include span-columns(4);
+	position: relative;
+	background-color: white;
+	height: 426px;
+
+	/* maybe set fallback background image here ? */
+	img {
+		width: 100%;
+		height: 240px;
+		z-index: 1;
+	}
+	.content {
+		position: absolute;
+		top: 282px;
+		margin: 18px;
+		font-family: $font-stack-headline;
+		font-size: 16px;
+	}
+	a {
+		text-decoration: none;
+		color: #646464;
+		display: block;  /* make the whole card clickable */
+		width: 100%;
+		height: 100%;
+	}
+
+	h2 {
+		font-family: $font-stack-headline-bold;
+		font-size: 18px;
+		color: black;
+	}
+
+	.event-type {
+		position: absolute;
+		width: 104px;
+		z-index: 5;
+		right: -10px;
+		top: 230px;
+		border: 2px solid $cdh-blue;
+		box-shadow: 5px 5px 0px $cdh-blue;
+		background-color: white;
+	}
+	.time {
+		padding-left: 20px;
+	}
+}

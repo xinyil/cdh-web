@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+
+{% for event in event_list %}
+    {% include 'events/snippets/event_card.html' %}
+{% endfor %}
+
+{% endblock %}

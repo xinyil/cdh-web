@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{# placeholder html #}
+
+<ul>
+{% for project in projects %}
+    <li>{{ project }}</li>
+{% endfor %}
+</ul>
+
+{% for event in events %}
+    {% include 'events/snippets/event_card.html' %}
+{% endfor %}
+
+
+
+{% endblock %}
