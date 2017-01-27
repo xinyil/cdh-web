@@ -6,7 +6,7 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}">
 
     <title>CDH @ Princeton  {{ page.title }}</title>
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     {% compress css %}
     <link rel='stylesheet' type='text/css' href='{% static "css/bootstrap.css" %}'>
     <link rel='stylesheet' type='text/css' href='{% static "css/non-responsive-overrides.css" %}'>
@@ -36,26 +36,10 @@
     });
 
     </script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-87887700-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
-
 
     {% endcompress %}
 
     <style>
-	@media print {
-	  a[href]:after {
-	    content: none !important;
-	  }
-	}
 
         body {overflow-x: hidden; padding-right: 0px;}
 
@@ -83,19 +67,46 @@
 			width: 60px;
 		}
 
-		.image-box {
+		.project-box {
 		width: 235px;
 		height: 176px;
-        display: inline-block;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        clip-path: url('#clipImage');
+                display: inline-block;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                } 
+                .image-holder {
+                  width: 235px;
+                  position: absolute;  
+                  content: ' '; 
+                }
 
+                /* triangle top right */
+                .image-holder:after {
+                  height: 0;
+                  border-top: 50px solid white !important;
+                  border-left: 50px solid transparent !important;
+                  content: ' ';
+                  position: absolute;
+                  right: 0;
+                  top: 0; 
+                  z-index: 5;  
+                    
+                }
+                /* triangle bottom left */
+                .image-holder:before {
+                  height: 0;
+                  width: 0;  
+                  border-bottom: 50px solid white !important;
+                  border-right: 50px solid transparent !important;
+                  content: ' ';
+                  position: absolute;
+                  left: 0;
+                  bottom: -176; 
+                  z-index: 5;
+                }
 
-		}
-
-        .image-box:hover > .title-box {
+        .project-box:hover > .title-box {
              transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
@@ -103,7 +114,7 @@
         }
 
 
-        .image-box:hover > .title-text {
+        .project-box:hover > .title-text {
              transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
@@ -111,14 +122,10 @@
         }
 
 		.main-image {
-			/*Chrome,Safari*/
-			-webkit-clip-path: polygon(185px 0px, 235px 50px, 235px 176px, 50px 176px, 0px 126px, 0px 0px);
-			/*Firefox*/
-			clip-path: url('#clipImage');
-			overflow: hidden;
+		overflow: hidden;
             position: absolute;
-            max-height: 500px;
-            width: auto;
+            height: 176px;
+            width: 235;
 		}
 
 

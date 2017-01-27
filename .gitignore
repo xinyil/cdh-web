@@ -2,7 +2,8 @@
 local_settings.py
 db.sqlite3
 
-
+# Media ignores
+static/media/
 # stock python git-ignores provided by github
 
 # Byte-compiled / optimized / DLL files

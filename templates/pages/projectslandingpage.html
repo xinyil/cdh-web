@@ -39,7 +39,7 @@
     <div class='col-xs-9' style='padding: 0px 0px 0px 0px;'>
         {% for project in projects %}
         <a class='box-link' href='/projects/{{ project.project_data.project_title|cut:" " }}'>
-	<div class='image-box'>
+	<div class='project-box'>
             <div class='title-box'>
                     <div class='title-text'>
                         {{ project.project_data.project_title }}
@@ -49,12 +49,13 @@
                         
                     </div>
                             </div>
+                            <div class='image-holder'>
                                 {% if project.override_image %}
                                 <img class='main-image' src='{{MEDIA_URL}}{{project.override_image}}'>
                                 {% else %}
                                 <img class='main-image' src='{{MEDIA_URL}}{{project.project_image}}'>
                                 {% endif %}
-
+                            </div>
         </div>
         </a>
 
