@@ -7,13 +7,13 @@ from .models import ProjectPage, Project, ProjectMember, ProjectsLandingPage, Pr
 class ProjectPageInline(admin.StackedInline):
     model = ProjectPage
     max_num = 1
-
+    fields = ('title', 'status', 'publish_date', 'expiry_date')
 
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [
         ProjectPageInline,
     ]
-    
+
 
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectMember)

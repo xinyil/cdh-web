@@ -5,7 +5,7 @@ from .models import Event, EventPage, EventsLandingPage
 class EventPageInline(admin.StackedInline):
     model = EventPage
     max_num = 1
-    fields = ('status', 'publish_date', 'expiry_date')
+    fields = ('title', 'status', 'publish_date', 'expiry_date')
 
 
 class EventAdmin(admin.ModelAdmin):
