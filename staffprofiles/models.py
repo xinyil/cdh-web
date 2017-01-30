@@ -39,4 +39,6 @@ class StafferPage(Displayable):
 
 
 class StaffLandingPage(Page):
-    pass
+
+    class Meta:
+        verbose_name = 'Staff List'
