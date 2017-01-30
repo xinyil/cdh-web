@@ -23,8 +23,8 @@ from django.utils.translation import ugettext_lazy as _
 # Controls the ordering and grouping of the admin menu.
 #
 ADMIN_MENU_ORDER = (
-     ("Content", ("pages.Page", 'stocktemplate.StockLandingPage',  "blog.BlogPost",
-        "generic.ThreadedComment", (_("Media Library"), "media-library"),)),
+     ("Content", (("Page Hierarchy", "pages.Page"), ('CMS Pages', 'stocktemplate.StockLandingPage'),  "blog.BlogPost",
+     (_("Media Library"), "media-library"),)),
      ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
      ("Users", ("auth.User", "auth.Group",)),
  )
