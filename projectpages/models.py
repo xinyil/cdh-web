@@ -23,7 +23,9 @@ class ProjectRole(models.Model):
 
     def __str__(self):
         return self.title + ": " + str(self.rank) 
-
+    
+    class Meta:
+        verbose_name = 'Project Role'
 
 class ProjectMember(models.Model):
     name = models.CharField(max_length=255)
@@ -35,8 +37,7 @@ class ProjectMember(models.Model):
     
     class Meta:
         ordering = ('-project_role__rank',)
-
-
+        verbose_name = 'Project Member'
 
 class ProjectPage(Displayable):
     project_data = models.ForeignKey(Project)
@@ -52,6 +53,5 @@ class ProjectPage(Displayable):
         ordering = ('-project_data__project_create_update',)
 
 class ProjectsLandingPage(Page):
-
-    pass
-
+    class Meta:
+        verbose_name = 'Project List'

@@ -27,7 +27,10 @@ ADMIN_MENU_ORDER = (
      (_("Media Library"), "media-library"),)),
      ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
      ("Users", ("auth.User", "auth.Group",)),
- )
+     ("Events Config", ("eventspages.Event", "eventspages.EventLandingPage",)),
+     ("Projects Config", ("projectpages.Project", "projectpages.ProjectMember", 
+        "projectpages.ProjectRole", "projectpages.ProjectLandingPage",))
+     )
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.

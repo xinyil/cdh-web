@@ -4,8 +4,18 @@ from django.contrib import admin
 from .models import ProjectPage, Project, ProjectMember, ProjectsLandingPage, ProjectRole
 
 
-admin.site.register(ProjectPage)
-admin.site.register(Project)
+class ProjectPageInline(admin.StackedInline):
+    model = ProjectPage
+    max_num = 1
+
+
+class ProjectAdmin(admin.ModelAdmin):
+    inlines = [
+        ProjectPageInline,
+    ]
+    
+
+admin.site.register(Project, ProjectAdmin)
 admin.site.register(ProjectMember)
-admin.site.register(ProjectsLandingPage)
 admin.site.register(ProjectRole)
+admin.site.register(ProjectsLandingPage)
