@@ -30,7 +30,7 @@ class Event(models.Model):
 class EventPage(Displayable):
     event_data = models.ForeignKey(Event)
     extra_info = fields.RichTextField()
-
+    title = models.CharField(max_length=500, default='Events @ CDH') 
     def get_absolute_url(self):
         return '/events/' + str(self.pk)
 
