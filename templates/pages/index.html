@@ -67,7 +67,7 @@ font-family: 'Lyon Text Web', Georgia, serif;
 .box-link, .box-link:hover {
     color: black;
     text-decoration: none !important;
-    
+
 
 }
 
@@ -89,14 +89,15 @@ font-family: 'Lyon Text Web', Georgia, serif;
 <div class='row'><div class='col-xs-12' style='height: 150px;'></div></div>
 
 <div class='row'>
-        <div class='col-xs-3'>    
+        <div class='col-xs-3'>
         <img src='{% static "img/CDH_logo_01.svg" %}'
-             style='position: fixed; width: 200px; height: auto;'>
+             style='position: fixed; width: 200px; height: auto;'
+             alt='CDH Logo'>
             </div>
-            
-    
+
+
     <div class='col-xs-9' style='padding: 0px 0px 0px 0px;'>
-          
+
                 <br />
                 <br />
 
@@ -113,57 +114,61 @@ font-family: 'Lyon Text Web', Georgia, serif;
                             </div>
                             <div class='image-holder'>
                                 {% if project.override_image %}
-                                <img class='main-image' src='{{MEDIA_URL}}{{project.override_image}}'>
+                                <img alt='{{project.project_data.project_title}}'
+                                class='main-image'
+                                src='{{MEDIA_URL}}{{project.override_image}}'>
                                 {% else %}
-                                <img class='main-image' src='{{MEDIA_URL}}{{project.project_image}}'>
+                                <img class='main-image'
+                                alt='{{project.project_data.project_title}}'
+                                src='{{MEDIA_URL}}{{project.project_image}}'>
                                 {% endif %}
-                            </div> 
+                            </div>
                             </div>
             </a>
-    
+
                 {% endfor %}
-                
+
                 {% for event in events %}
                 <a class='unstyled' href='/events/{{event.pk}}/'>
                    <div class='text-frame'>
                     <div class='top-text'>
                         <h4>{{ event.event_data.event_start_time|date:"F d" }}</h4>
                         <h4>{{ event.event_data.event_start_time|date:"h:i A"  }}-{{ event.event_data.event_end_time|date:"h:i A" }}</h4>
-                    </div>   
-                    
+                    </div>
+
                     <div class='bottom-text'>
                         <span class='box-italic'>{{ event.event_data.event_sponsor }}</span>
                         <h3>{{ event.event_data.event_title }}</h3>
                     </div>
                 </div>
-                </a>    
-        
+                </a>
+
                 {% endfor %}
-        
+
             <div class='project-box'></div>
             <div class='project-box'></div>
-            
-        
+
+
             <a class='unstyled' href='mailto:dhi@princeton.edu'>
                 <div class='no-fade project-box '>
                         <div class='no-fade title-box'>
                             <div class='no-fade title-text'>
                                 Contact
-                                
+
                                 <div class='bottom-text no-fade'>
                                 Firestone Library Floor B<br />
                                 Princeton University<br/>
-                                dhi@princeton.edu<br />    
+                                dhi@princeton.edu<br />
                                 </div>
                                 </div>
-                            
+
                             </div>
                                 <img class='main-image' style='height: 176px; width: 235px;' src='{%static "img/stripeShadow.svg" %}'>
                                     </div>
 
-                        </a>        
+                        </a>
 
-    </div>    
+    </div>
 </div>
 </div>
 <div class='row'><div class='col-xs-12' style='height: 300px;'></div></div>
