@@ -44,7 +44,6 @@ class ProjectPage(Displayable):
     project_content = RichTextField()
     project_image = FileField(format="Image")
     override_image = FileField(format="Image", blank=True, null=True)
-    title = models.CharField(max_length=500, default='CDH @ Princeton Projects')
     def get_absolute_url(self):
         name = '/projects/' + self.project_data.project_title.replace(' ', '').lower()
         return name
