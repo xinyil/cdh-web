@@ -3,6 +3,8 @@ from mezzanine.pages.models import Page
 from mezzanine.core.fields import RichTextField, FileField
 from mezzanine.core.models import Displayable
 
+from django.utils.text import slugify
+
 class Project(models.Model):   
     project_title = models.CharField(max_length=255)
     project_subtitle = models.CharField(max_length=80, blank=True, null=True)
@@ -45,7 +47,7 @@ class ProjectPage(Displayable):
     project_image = FileField(format="Image")
     override_image = FileField(format="Image", blank=True, null=True)
     def get_absolute_url(self):
-        name = '/projects/' + self.project_data.project_title.replace(' ', '').lower()
+        name = '/projects/' + slugify(self.project_data.project_title)
         return name
 
     class Meta:

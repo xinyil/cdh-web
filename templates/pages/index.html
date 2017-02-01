@@ -102,7 +102,7 @@ font-family: 'Lyon Text Web', Georgia, serif;
                 <br />
 
                  {% for project in projects %}
-            <a class='box-link' href='/projects/{{ project.project_data.project_title|cut:" " }}'>
+            <a class='box-link' href='{{ project.get_absolute_url }}'>
 	        <div class='project-box'>
                 <div class='title-box'>
                     <div class='title-text'>
