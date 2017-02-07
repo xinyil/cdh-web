@@ -23,11 +23,15 @@ from django.utils.translation import ugettext_lazy as _
 # Controls the ordering and grouping of the admin menu.
 #
 ADMIN_MENU_ORDER = (
-     ("Content", ("pages.Page", 'stocktemplate.StockLandingPage',  "blog.BlogPost",
-        "generic.ThreadedComment", (_("Media Library"), "media-library"),)),
+     ("Content", (("Page Hierarchy", "pages.Page"), ('CMS Pages', 'stocktemplate.StockLandingPage'),  "blog.BlogPost",
+     (_("Media Library"), "media-library"),)),
      ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
      ("Users", ("auth.User", "auth.Group",)),
- )
+     ("Events Config", ("eventspages.Event", "eventspages.EventsLandingPage",)),
+     ("Projects Config", ("projectpages.Project", "projectpages.ProjectMember", 
+        "projectpages.ProjectRole", "projectpages.ProjectLandingPage",)),
+     ("Staff Config", ("staffprofiles.Staffer", "staffprofiles.StaffLandingPage",)), 
+    )
 
 # A three item sequence, each containing a sequence of template tags
 # used to render the admin dashboard.

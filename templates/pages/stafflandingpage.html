@@ -76,7 +76,8 @@
             {% for staffer in staffers %}
                 <a href='{{ staffer.get_absolute_url }}'
                    class='unstyled-link'><div class='profile_block'>
-                    <img class='profile_image' src='{{MEDIA_URL}}{{staffer.staffer_data.photo}}'/>
+                    <img alt='A photo of {{staffer.staffer_data.name}}'
+                    class='profile_image' src='{{MEDIA_URL}}{{staffer.staffer_data.photo}}'/>
                     <div class='bottom_text'>
                         <p><span class='title_text'>{{ staffer.staffer_data.title }}</span><br />
                             <span class='name_text'>{{ staffer.staffer_data.name }}</span></p>

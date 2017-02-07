@@ -25,17 +25,18 @@ class Event(models.Model):
     def __str__(self):
         return self.event_title + " " + \
         self.event_start_time.strftime('%b %d, %Y')
-                                        
+
 
 class EventPage(Displayable):
     event_data = models.ForeignKey(Event)
     extra_info = fields.RichTextField()
-    
     def get_absolute_url(self):
         return '/events/' + str(self.pk)
-    
+
     class Meta:
-        ordering = ('event_data__event_start_time',) 
+        ordering = ('event_data__event_start_time',)
+
 
 class EventsLandingPage(Page):
-    pass
+    class Meta:
+        verbose_name = 'Event List'

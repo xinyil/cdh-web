@@ -3,6 +3,8 @@ from mezzanine.pages.models import Page
 from mezzanine.core.fields import RichTextField, FileField
 from mezzanine.core.models import Displayable
 
+from django.utils.text import slugify
+
 class Project(models.Model):   
     project_title = models.CharField(max_length=255)
     project_subtitle = models.CharField(max_length=80, blank=True, null=True)
@@ -23,7 +25,9 @@ class ProjectRole(models.Model):
 
     def __str__(self):
         return self.title + ": " + str(self.rank) 
-
+    
+    class Meta:
+        verbose_name = 'Project Role'
 
 class ProjectMember(models.Model):
     name = models.CharField(max_length=255)
@@ -35,23 +39,20 @@ class ProjectMember(models.Model):
     
     class Meta:
         ordering = ('-project_role__rank',)
-
-
+        verbose_name = 'Project Member'
 
 class ProjectPage(Displayable):
     project_data = models.ForeignKey(Project)
     project_content = RichTextField()
     project_image = FileField(format="Image")
     override_image = FileField(format="Image", blank=True, null=True)
-
     def get_absolute_url(self):
-        name = '/projects/' + self.project_data.project_title.replace(' ', '').lower()
+        name = '/projects/' + slugify(self.project_data.project_title)
         return name
 
     class Meta:
         ordering = ('-project_data__project_create_update',)
 
 class ProjectsLandingPage(Page):
-
-    pass
-
+    class Meta:
+        verbose_name = 'Project List'

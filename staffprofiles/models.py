@@ -30,7 +30,6 @@ class Specialty(models.Model):
 class StafferPage(Displayable):
     staffer_data = models.ForeignKey(Staffer)
     extra_content = RichTextField()
-
     def get_absolute_url(self):
         return '/about/staff/' + self.staffer_data.name.lower().replace(' ', '-')
 
@@ -39,4 +38,6 @@ class StafferPage(Displayable):
 
 
 class StaffLandingPage(Page):
-    pass
+
+    class Meta:
+        verbose_name = 'Staff List'

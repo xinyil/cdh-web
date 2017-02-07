@@ -6,7 +6,7 @@
     <meta name="description" content="{% block meta_description %}{% endblock %}">
 
     <title>CDH @ Princeton  {{ page.title }}</title>
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
     {% compress css %}
     <link rel='stylesheet' type='text/css' href='{% static "css/bootstrap.css" %}'>
     <link rel='stylesheet' type='text/css' href='{% static "css/non-responsive-overrides.css" %}'>
@@ -36,26 +36,10 @@
     });
 
     </script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-87887700-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>	    
-
 
     {% endcompress %}
 
     <style>
-	@media print {
-	  a[href]:after {
-	    content: none !important;
-	  }
-	}
 
         body {overflow-x: hidden; padding-right: 0px;}
 
@@ -83,19 +67,46 @@
 			width: 60px;
 		}
 
-		.image-box {
+		.project-box {
 		width: 235px;
 		height: 176px;
-        display: inline-block;
-        margin-right: 20px;
-        margin-bottom: 20px;
-        overflow: hidden;
-        clip-path: url('#clipImage');
+                display: inline-block;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                }
+                .image-holder {
+                  width: 235px;
+                  position: absolute;
+                  content: ' ';
+                }
 
+                /* triangle top right */
+                .image-holder:after {
+                  height: 0;
+                  border-top: 50px solid white !important;
+                  border-left: 50px solid transparent !important;
+                  content: ' ';
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  z-index: 5;
 
-		}
+                }
+                /* triangle bottom left */
+                .image-holder:before {
+                  height: 0;
+                  width: 0;
+                  border-bottom: 50px solid white !important;
+                  border-right: 50px solid transparent !important;
+                  content: ' ';
+                  position: absolute;
+                  left: 0;
+                  bottom: -176;
+                  z-index: 5;
+                }
 
-        .image-box:hover > .title-box {
+        .project-box:hover > .title-box {
              transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
@@ -103,7 +114,7 @@
         }
 
 
-        .image-box:hover > .title-text {
+        .project-box:hover > .title-text {
              transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
    -webkit-transition: opacity .25s ease-in-out;
@@ -111,14 +122,10 @@
         }
 
 		.main-image {
-			/*Chrome,Safari*/
-			-webkit-clip-path: polygon(185px 0px, 235px 50px, 235px 176px, 50px 176px, 0px 126px, 0px 0px);
-			/*Firefox*/
-			clip-path: url('#clipImage');
-			overflow: hidden;
+		overflow: hidden;
             position: absolute;
-            max-height: 500px;
-            width: auto;
+            height: 176px;
+            width: 235;
 		}
 
 
@@ -268,21 +275,11 @@
 
     <!--override to fix ye olde navbarre-->
     <body style='padding-top: 70px;'>
-
-<!--svgs-->
-        <svg width='0' height='0'>
-  <clipPath id='clipImage'>
-    <polygon points='185 0,235 50,235 176,50 176,0 126,0 0'>
-    </polygon>
-  </clipPath>
-</svg>
-
-
-
-
-
-
-
+      <a href='#mainnav'></a>
+      {% if page.slug != '/' %}
+      <a href='#sidenav'></a>
+      {% endif %}
+      <a href='#footernav'></a>
     <!--div for overall box-->
 
 
@@ -297,10 +294,11 @@
 
 
                 <div id='navbar' class='navbar-collapse collapse'>
-
-                    <ul class='nav navbar-nav'>
-                        <li><a href='/'><img src='{% static "img/CDH_logo_01.svg" %}'
-                                                                     style='width: 80px; height: 60px;'/></span></a></li>
+                    <ul class='nav navbar-nav' id='mainnav'>
+                        <li><a href='/'>
+                          <img src='{% static "img/CDH_logo_01.svg" %}'
+                               style='width: 80px; height: 60px;'
+                               alt='CDH Logo'/></span></a></li>
 				        <li><a href='/about/' ><span class='unstyled-link'>About</span></a></li>
                         <li><a href='/research/'><span class='unstyled-link'>Research</span></a></li>
                         <li><a href='/community/'><span class='unstyled-link'>Community</span></a></li>
@@ -312,7 +310,7 @@
                             </ul>
 
                             </div>
-                                  </li>
+                                              </li>
                     </ul>
                 </div>
 
@@ -339,7 +337,7 @@
 
     {% block maincontent %}{% endblock %}
 
-        <div class='row' style='width: 100%; padding: 0px; margin: auto;'>
+        <div class='row' style='width: 100%; padding: 0px; margin: auto; clear: left;'>
             <div class='col-xs-3' style='background-color: whitesmoke; height: 200px;'>&nbsp;</div>
             <div class='col-xs-3' style='font-family: "Brown Std Regular"; font-size: 15px; color: black; background-color: whitesmoke; height: 200px;'>
                 <ul class='list-unstyled' style='padding-top: 50px;'>
@@ -352,7 +350,7 @@
                 <span style='font-size: 12px;'>©2016 Trustees of Princeton University</span>
             </div>
             <div class='col-xs-3' style='font-family: "Brown Std Bold"; font-size: 15px; background-color: whitesmoke; height: 200px;'>
-                <ul class='list-unstyled' style='padding-top: 50px;'>
+                <ul class='list-unstyled' id='footernav'style='padding-top: 50px;'>
                     <li><a href='/contact/' class='unstyled-link'>Contact and Directions</a></li>
                     <li><br /></li>
                     <li><a href='/comingsoon/' class='unstyled-link'>FAQs</a></li>
@@ -366,10 +364,11 @@
                     <li><br /></li>
                     <li><a href='https://www.facebook.com/princetoncdh/' target='_blank'>
                         <span class='fa fa-facebook-square'
-                              aria-hidden='true'
+                              aria-lable='CDH Facebok Link'
                               id='facebooktag'></span></a>
                         <a href='https://twitter.com/PrincetonDH' target='_blank'>
                         <span class='fa fa-twitter'
+                              aria-label='CDH Twitter Link'
                               style='padding-left: 24px;'
                               id='twittertag'></span></a></li>
                 </ul>
