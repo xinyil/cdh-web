@@ -4,6 +4,12 @@ db.sqlite3
 
 # Media ignores
 static/media/
+static/CACHE
+**/.sass-cache/
+
+# Vim stuff
+*.swp
+
 # stock python git-ignores provided by github
 
 # Byte-compiled / optimized / DLL files
