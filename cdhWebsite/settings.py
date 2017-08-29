@@ -28,9 +28,9 @@ ADMIN_MENU_ORDER = (
      ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
      ("Users", ("auth.User", "auth.Group",)),
      ("Events Config", ("eventspages.Event", "eventspages.EventsLandingPage",)),
-     ("Projects Config", ("projectpages.Project", "projectpages.ProjectMember", 
+     ("Projects Config", ("projectpages.Project", "projectpages.ProjectMember",
         "projectpages.ProjectRole", "projectpages.ProjectLandingPage",)),
-     ("Staff Config", ("staffprofiles.Staffer", "staffprofiles.StaffLandingPage",)), 
+     ("Staff Config", ("staffprofiles.Staffer", "staffprofiles.StaffLandingPage",)),
     )
 
 # A three item sequence, each containing a sequence of template tags
@@ -170,15 +170,6 @@ DATABASES = {
 }
 
 
-################
-# EMAIL CONFIG #
-################
-EMAIL_HOST='smtp.princeton.edu'
-EMAIL_HOST_PASSWORD='DigitalHumanitiesInGr33n!'
-EMAIL_HOST_USER='DHI'
-EMAIL_PORT='587'
-EMAIL_USE_TLS=True,
-DEFAULT_FROM_EMAIL='CDH at Princeton <dhi@princeton.edu>'
 
 #########
 # PATHS #
@@ -334,7 +325,7 @@ FILEBROWSER_MAX_UPLOAD_SIZE = 10485760
 FILEBROWSER_EXTENSIONS = {
     'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
     'Document': ['.pdf','.xls','.xlsx'],
-}        
+}
 ##################
 # LOCAL SETTINGS #
 ##################
