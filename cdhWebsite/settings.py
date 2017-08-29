@@ -170,15 +170,6 @@ DATABASES = {
 }
 
 
-################
-# EMAIL CONFIG #
-################
-EMAIL_HOST='smtp.princeton.edu'
-EMAIL_HOST_PASSWORD='DigitalHumanitiesInGr33n!'
-EMAIL_HOST_USER='DHI'
-EMAIL_PORT='587'
-EMAIL_USE_TLS=True,
-DEFAULT_FROM_EMAIL='CDH at Princeton <cdh-info@princeton.edu>'
 
 #########
 # PATHS #
